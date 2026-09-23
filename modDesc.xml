@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="92" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
+    <author>Mr GAMER</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>Twin Track Control</en>
+        <uk>Керування гусеницями — Twin Track Control</uk>
+    </title>
+    <description>
+        <en><![CDATA[Toggle per-vehicle two-input steering with Left Ctrl + Left Alt + T (rebindable).
+Accelerate: drive and turn left. Brake: drive and turn right. Both: drive straight. Release both: brake.
+Requires manual direction changing; use the game's forward/reverse selector.
+The vehicle's original steering physics are retained. Mode is remembered per vehicle during the session.]]></en>
+        <uk><![CDATA[Перемикання режиму: ліві Ctrl + Alt + T. Комбінацію можна змінити в налаштуваннях керування.
+Прискорити: рух із поворотом ліворуч. Гальмувати: рух із поворотом праворуч. Обидва інпути: прямо. Обидва відпущені: гальмування.
+Потрібне ручне перемикання напряму руху. Для заднього ходу використовуй штатний реверс.
+Поворот використовує фізику конкретної машини. Режим запам'ятовується для кожної машини протягом поточної сесії.]]></uk>
+    </description>
+    <iconFilename>icon.dds</iconFilename>
+    <multiplayer supported="true"/>
+    <extraSourceFiles>
+        <sourceFile filename="scripts/TwinTrackControl.lua"/>
+    </extraSourceFiles>
+    <actions>
+        <action name="TTC_TOGGLE_MODE" category="VEHICLE"/>
+    </actions>
+    <inputBinding>
+        <actionBinding action="TTC_TOGGLE_MODE">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lctrl KEY_lalt KEY_t"/>
+        </actionBinding>
+    </inputBinding>
+    <l10n>
+        <text name="input_TTC_TOGGLE_MODE">
+            <en>Twin Track Control: toggle track steering</en>
+            <uk>Керування гусеницями: увімкнути / вимкнути</uk>
+        </text>
+        <text name="ttc_enable">
+            <en>Enable track steering</en>
+            <uk>Увімкнути керування гусеницями</uk>
+        </text>
+        <text name="ttc_disable">
+            <en>Disable track steering</en>
+            <uk>Вимкнути керування гусеницями</uk>
+        </text>
+        <text name="ttc_enabled">
+            <en>Track steering: ON — both inputs drive straight; release both to brake</en>
+            <uk>Керування гусеницями: УВІМК. Обидва інпути — прямо, відпустити обидва — гальмувати</uk>
+        </text>
+        <text name="ttc_disabled">
+            <en>Track steering: OFF — standard controls restored</en>
+            <uk>Керування гусеницями: ВИМК. Звичайне керування відновлено</uk>
+        </text>
+        <text name="ttc_needManualDirection">
+            <en>First enable manual direction changing in the game settings, then toggle track steering again</en>
+            <uk>Спочатку увімкни ручне перемикання напряму руху в налаштуваннях гри, потім увімкни режим знову</uk>
+        </text>
+        <text name="ttc_disabledManualDirection">
+            <en>Track steering disabled: manual direction changing is required</en>
+            <uk>Керування гусеницями вимкнено: потрібне ручне перемикання напряму руху</uk>
+        </text>
+    </l10n>
+</modDesc>
